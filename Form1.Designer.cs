@@ -34,6 +34,7 @@
             txtPushData = new RichTextBox();
             btnSend = new Button();
             txtResult = new RichTextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblProject
@@ -83,11 +84,22 @@
             txtResult.TabIndex = 6;
             txtResult.Text = "";
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 401);
+            label1.Name = "label1";
+            label1.Size = new Size(164, 15);
+            label1.TabIndex = 7;
+            label1.Text = "newid() - generates new GUID";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 432);
+            Controls.Add(label1);
             Controls.Add(txtResult);
             Controls.Add(btnSend);
             Controls.Add(txtPushData);
@@ -105,5 +117,6 @@
         private RichTextBox txtPushData;
         private Button btnSend;
         private RichTextBox txtResult;
+        private Label label1;
     }
 }

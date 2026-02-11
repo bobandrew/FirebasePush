@@ -18,7 +18,7 @@ namespace FirebasePush
             try
             {
                 var pushHelper = new PushHelper(txtProjectId.Text);
-                var message = JsonConvert.DeserializeObject<Message>(txtPushData.Text);
+                var message = JsonConvert.DeserializeObject<Message>(txtPushData.Text.Replace("newid()", Guid.NewGuid().ToString()));
                 txtResult.Text = pushHelper.Send(message);
             }
             catch (Exception ex)
